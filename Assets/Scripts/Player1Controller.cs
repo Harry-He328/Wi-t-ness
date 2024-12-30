@@ -8,7 +8,8 @@ public class Player1Controller : MonoBehaviour
     public float gridSize = 1f; // 网格单元的大小
     private Animator anim;
     public bool isMoving;
-
+    public float rotationSpeed;
+    private Rigidbody rb;
     private GameObject movePoint;
     private bool isActivePlayer;
     public CinemachineVirtualCamera vc1;
@@ -17,7 +18,7 @@ public class Player1Controller : MonoBehaviour
     private void Start()
     {
         movePoint = transform.Find("Player1MovePoint").gameObject;
-        //
+        rb = GetComponent<Rigidbody>();
         movePoint.transform.parent = null;
     }
 
@@ -32,34 +33,63 @@ public class Player1Controller : MonoBehaviour
     }
 
     public void Player1Movement()
-    {       
-        //角色移动到目标地点
-        transform.position =
-            Vector3.MoveTowards(transform.position, movePoint.transform.position,
-                moveSpeed * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, movePoint.transform.position) <= .05f
-            && !isMoving && GameManager.Instance.GetActionPoint())
+{
+    // 角色移动到目标地点
+    float step = moveSpeed * Time.deltaTime;
+    transform.position = Vector3.MoveTowards(transform.position, movePoint.transform.position, step);
+ 
+    // 检查是否到达目标点
+    float distanceToTarget = Vector3.Distance(transform.position, movePoint.transform.position);
+    if (distanceToTarget <= 0.05f && !isMoving && GameManager.Instance.GetActionPoint())
+    {
+        // 重置移动状态
+        isMoving = false;
+ 
+        // 根据输入设置新的目标地点
+        Vector3 newDirection = Vector3.zero;
+        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
         {
-            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
-            {
-                //设置目标地点
-                movePoint.transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * gridSize, 0f, 0f);
-                //行动点数-1
-                GameManager.Instance.SetActionPoint();
-
-            }
-        
-            if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
-            {
-                //设置目标地点
-                movePoint.transform.position += new Vector3(0f, 0f, Input.GetAxisRaw("Vertical") * gridSize);
-                //行动点数-1
-                GameManager.Instance.SetActionPoint();
-            }
-            
+            newDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f) * gridSize;
+        }
+        else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
+        {
+            newDirection = new Vector3(0f, 0f, Input.GetAxisRaw("Vertical") * gridSize);
+        }
+ 
+        if (newDirection != Vector3.zero)
+        {
+            movePoint.transform.position += newDirection;
+            GameManager.Instance.SetActionPoint(); // 行动点数-1
+            isMoving = true;
         }
     }
+    else
+    {
+        isMoving = distanceToTarget > 0.05f;
+    }
+ 
+    Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+    RaycastHit floorHit;
+    if (Physics.Raycast(camRay, out floorHit, LayerMask.GetMask("Ground")))
+    {
+        // 计算角色到鼠标投影点的向量
+        Vector3 playerToMouse = floorHit.point - new Vector3(transform.position.x, 0f, transform.position.z);
+        playerToMouse.y = 0f;
+
+        Vector3 direction = playerToMouse.normalized;
+ 
+        // 计算角度
+        float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
+        Debug.Log(angle);
+        angle = Mathf.Round(angle / 90.0f) * 90.0f;
+        if (angle == -0f) angle = 0f;
+
+        Quaternion newRotation = Quaternion.AngleAxis(angle, Vector3.up);
+        
+        transform.rotation = newRotation;
+    }
+}
+
     
     //判断是否在移动，如果正在移动过程中则不能进行下一次移动，实现每次移动消耗一个行动点数的效果
     public void MoveableDetection()
