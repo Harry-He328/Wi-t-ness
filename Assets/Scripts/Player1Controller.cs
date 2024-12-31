@@ -88,8 +88,29 @@ public class Player1Controller : MonoBehaviour
         
         transform.rotation = newRotation;
     }
-}
 
+//     Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+// RaycastHit floorHit;
+// if (Physics.Raycast(camRay, out floorHit, LayerMask.GetMask("Ground")))
+// {
+//     // 计算地面击中点和角色在地平面上的投影点之间的向量
+//     Vector3 playerPositionXZ = new Vector3(transform.position.x, 0f, transform.position.z);
+//     Vector3 direction = floorHit.point - playerPositionXZ;
+//     direction.Normalize();  // 确保方向向量是单位长度
+
+//     // 计算角度，这里使用 Mathf.Atan2 来获取从 x 轴到向量的角度
+//     float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
+//     angle = (angle + 360) % 360;  // 确保角度在 0-360 度之间
+
+//     // 如果需要将角度限制为 0, 90, 180, 270 度，可以这样处理
+//     angle = Mathf.RoundToInt(angle / 90.0f) * 90.0f;
+//     if (angle == 360) angle = 0;  // 处理 360 度的情况
+
+//     // 应用旋转
+//     Quaternion newRotation = Quaternion.Euler(0, angle, 0);  // 围绕 y 轴旋转
+//     transform.rotation = newRotation;
+// }
+}
     
     //判断是否在移动，如果正在移动过程中则不能进行下一次移动，实现每次移动消耗一个行动点数的效果
     public void MoveableDetection()
