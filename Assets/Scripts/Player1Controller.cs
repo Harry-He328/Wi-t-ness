@@ -80,17 +80,30 @@ public class Player1Controller : MonoBehaviour
  
         // 计算角度
         float angle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
-        Debug.Log(angle);
+
         angle = Mathf.Round(angle / 90.0f) * 90.0f;
         if (angle == -0f) angle = 0f;
-
-        Quaternion newRotation = Quaternion.AngleAxis(angle, Vector3.up);
         
-        transform.rotation = newRotation;
+        
+        if (angle == 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+        }
+        else if (angle == 90)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (angle == 180 || angle == -180)
+        {
+            transform.rotation = Quaternion.Euler(0, 270, 0);
+        }
+        else if(angle == 270 || angle == -90)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 }
 
-    
     //判断是否在移动，如果正在移动过程中则不能进行下一次移动，实现每次移动消耗一个行动点数的效果
     public void MoveableDetection()
     {

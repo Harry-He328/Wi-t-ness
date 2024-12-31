@@ -17,6 +17,7 @@ public class Player2Controller : MonoBehaviour
     public CinemachineVirtualCamera vc2;
     public float g = 9.8f;
     public float jumpForce;
+    private CapsuleCollider groundCheckCollider;
     
     [Header("Turn-Based Movement")]
     public bool turn_based_movement;
@@ -27,8 +28,6 @@ public class Player2Controller : MonoBehaviour
     [Header("Real-Time Movement")]
     public bool real_time_movement;
     public float moveSpeed;
-
-    
     
     // Start is called before the first frame update
     void Start()
@@ -36,6 +35,7 @@ public class Player2Controller : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         movePoint = transform.Find("Player2MovePoint").gameObject;
         movePoint.transform.parent = null;
+        groundCheckCollider = GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
@@ -63,20 +63,7 @@ public class Player2Controller : MonoBehaviour
     
     public void Player2Movement()
     {
-        //这个方法和一般的跳跃的方法兼容不了，有点烂
-        // transform.position =
-        //     Vector3.MoveTowards(transform.position, movePoint.transform.position,
-        //         moveSpeed * Time.deltaTime);
-   
-        //这段可以让物体瞬移一格
-        // if (Vector3.Distance(transform.position, movePoint.transform.position) <= .05f && !isMoving)
-        // {
-        //     if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
-        //     {
-        //         //设置目标地点
-        //         movePoint.transform.position += new Vector3( 0f, 0f,-Input.GetAxisRaw("Horizontal"));
-        //     }
-        // }
+
         if (turn_based_movement)
         {
             if ((Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f) && !isMoving && GameManager.Instance.GetActionPoint())
@@ -121,7 +108,6 @@ public class Player2Controller : MonoBehaviour
             // 更新角色位置
             transform.Translate(0, 0, -moveAmount);
         }
-        
     }
     //判断是否在移动，如果正在移动过程中则不能进行下一次移动，实现每次移动消耗一个行动点数的效果
     public void MoveableDetection()
@@ -144,16 +130,23 @@ public class Player2Controller : MonoBehaviour
         }
     }
     
-    
-    
-    
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag.Equals("Ground"))
         {
             onGround = true;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag.Equals("Ground"))
+        {
+            onGround = false;
+        }
+    }
 }
+
+//目前操作手感不是很好，贴墙走会有震动，和地面的判定不是很对
 
 
