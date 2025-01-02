@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public static CameraController instance;
+    public static CameraController Instance;
 
     public Cinemachine.CinemachineVirtualCamera cine1,cine2;
     public bool activePlayer1 = true;
 
     private void Awake()
     {
-        instance = this;
-    }
-
-    void Start()
-    {
-
+        Instance = this;
     }
 
     void Update()

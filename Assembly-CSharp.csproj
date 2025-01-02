@@ -48,6 +48,7 @@
      <Compile Include="Assets\Resources\Quirky Series - Birds Bundle\_Scripts\Demo.cs" />
      <Compile Include="Assets\Scripts\Player1Controller.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Sprites" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza" />
