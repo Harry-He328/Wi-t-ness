@@ -3,7 +3,7 @@ using UnityEngine;
  
 public class EnemyController : MonoBehaviour
 {
-    public Transform playerTransform1; // 引用玩家的位置
+    public Transform playerTransform1;
     public Transform playerTransform2;
     public float moveSpeed = 1.0f; // 移动速度
     public float gridSize = 1.0f; // 网格大小
@@ -16,22 +16,24 @@ public class EnemyController : MonoBehaviour
     {
         movePoint = transform.position;
         Instance = this;
-
     }
 
     void Update()
     {
-        if (CameraController.Instance.activePlayer1)
+        if(GameManager.Instance.isPlayerTurn)
         {
-            EnemyMovement1();
-        }
-        else
-        {
-            EnemyMovement2();
+            if (CameraController.Instance.activePlayer1)
+            {
+                EnemyMovement1();
+            }
+            else
+            {
+                EnemyMovement2();
+                Gravity();
+            }
         }
     }
 
-    
     //想在这里实现让敌人每走一步就停一下
    private IEnumerator EnemyMovementCoroutine()
     {
@@ -82,9 +84,7 @@ public class EnemyController : MonoBehaviour
     
     public void EnemyMovement1()
     {
-        if(!GameManager.Instance.isPlayerTurn && CameraController.Instance.activePlayer1)
-        {
-            if (!enemyMoveable || GameManager.Instance.currentEnemyActionPoint <= 0)
+        if (!enemyMoveable || GameManager.Instance.currentEnemyActionPoint <= 0)
                 return;
 
             // 角色移动到目标地点
@@ -126,31 +126,34 @@ public class EnemyController : MonoBehaviour
             {
                 isMoving = distanceToTarget > 0.05f;
             }
-        }
     }
 
+    //目前先考虑player2也是按照网格移动的，然后跳跃做成技能
     public void EnemyMovement2()
     {
-        if (!GameManager.Instance.isPlayerTurn && !CameraController.Instance.activePlayer1)
+    // 计算目标位置与敌人当前位置的 z 轴差
+        float targetZ = playerTransform2.position.z;
+        float currentZ = transform.position.z;
+        float directionZ = targetZ - currentZ;
+
+        // 计算移动量
+        float moveAmount = moveSpeed * Time.deltaTime;
+
+        // 限制移动量不超过实际距离
+        float distanceZ = Mathf.Abs(directionZ);
+        if (distanceZ < moveAmount)
         {
-            // 计算目标方向与敌人当前方向的向量差
-            Vector3 direction = playerTransform2.position - transform.position;
- 
-            // 确保敌人不会穿过目标，计算距离并限制在一步之内
-            float distance = direction.magnitude;
-            direction.Normalize(); // 标准化方向向量，使其长度为1
- 
-            // 计算移动量
-            float moveAmount = moveSpeed * Time.deltaTime;
- 
-            // 如果距离小于一步的距离，则只移动剩余的距离
-            if (distance < moveAmount)
-            {
-                moveAmount = distance;
-            }
- 
-            // 根据方向向量和移动量更新敌人位置
-            transform.position += direction * moveAmount;
+            moveAmount = distanceZ;
         }
+
+        // 根据 z 轴方向（正负）和移动量更新敌人位置
+        Vector3 newPosition = transform.position;
+        newPosition.z += directionZ > 0 ? moveAmount : -moveAmount; // 根据方向Z的正负来决定是加还是减
+        transform.position = newPosition;
+    }
+
+    public void Gravity()
+    {
+        rb.AddForce(-1 * g,0,0,ForceMode.Force);
     }
 }

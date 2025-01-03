@@ -64,39 +64,38 @@ public class Player2Controller : MonoBehaviour
     public void Player2Movement()
     {
 
-        // if (turn_based_movement)
-        // {
-        //     if ((Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f) && !isMoving && GameManager.Instance.GetActionPoint())
-        //     {
-        //         // 计算目标位置
-        //         float moveDistance = 2f;
-        //         time = 1f;
-        //         
-        //         targetPosition = transform.position + new Vector3(0, 0, -Input.GetAxisRaw("Horizontal") * moveDistance);
-        //
-        //         // 减少行动点数
-        //         GameManager.Instance.SetActionPoint();
-        //     
-        //         isMoving = true;
-        //         elapsedTime = 0.0f;
-        //     }
-        //
-        //     if (isMoving)
-        //     {
-        //         elapsedTime += Time.deltaTime;
-        //         float t = elapsedTime / time;
-        //         t = Mathf.Clamp01(t);
-        //     
-        //         transform.position = Vector3.Lerp(transform.position, targetPosition, t);
-        //
-        //         // 检查是否到达目标位置
-        //         if (t >= 1.0f)
-        //         {
-        //             isMoving = false;
-        //             elapsedTime = 0.0f;
-        //         }
-        //     }
-        // }
+        if (turn_based_movement)
+        {
+            if ((Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f) && !isMoving && GameManager.Instance.GetActionPoint())
+            {
+                // 计算目标位置
+                float moveDistance = 2f;
+                time = 1f;
+                targetPosition = transform.position + new Vector3(0, 0, -Input.GetAxisRaw("Horizontal") * moveDistance);
+        
+                // 减少行动点数
+                GameManager.Instance.SetActionPoint();
+            
+                isMoving = true;
+                elapsedTime = 0.0f;
+            }
+        
+            if (isMoving)
+            {
+                elapsedTime += Time.deltaTime;
+                float t = elapsedTime / time;
+                t = Mathf.Clamp01(t);
+            
+                transform.position = Vector3.Lerp(transform.position, targetPosition, t);
+        
+                // 检查是否到达目标位置
+                if (t >= 1.0f)
+                {
+                    isMoving = false;
+                    elapsedTime = 0.0f;
+                }
+            }
+        }
 
         if (real_time_movement)
         {
