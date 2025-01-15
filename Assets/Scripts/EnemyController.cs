@@ -7,15 +7,18 @@ public class EnemyController : MonoBehaviour
     public Transform playerTransform2;
     public float moveSpeed = 1.0f; // 移动速度
     public float gridSize = 1.0f; // 网格大小
-    public bool enemyMoveable = true; // 敌人是否可以移动
+    public bool enemyMoveable = false; // 敌人是否可以移动
     private bool isMoving = false; // 当前是否正在移动
     private Vector3 movePoint; // 目标移动点
     public static EnemyController Instance;
+    private Rigidbody rb;
  
     void Start()
     {
         movePoint = transform.position;
         Instance = this;
+
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -154,6 +157,6 @@ public class EnemyController : MonoBehaviour
 
     public void Gravity()
     {
-        rb.AddForce(-1 * g,0,0,ForceMode.Force);
+        rb.AddForce(-1 * GameManager.Instance.g, 0, 0, ForceMode.Force);
     }
 }

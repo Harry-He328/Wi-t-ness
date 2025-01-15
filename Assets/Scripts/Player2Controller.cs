@@ -15,7 +15,6 @@ public class Player2Controller : MonoBehaviour
     public bool onGround;
     public CinemachineVirtualCamera vc1;
     public CinemachineVirtualCamera vc2;
-    public float g = 9.8f;
     public float jumpForce;
     private CapsuleCollider groundCheckCollider;
     
@@ -66,7 +65,7 @@ public class Player2Controller : MonoBehaviour
 
         if (turn_based_movement)
         {
-            if ((Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f) && !isMoving && GameManager.Instance.GetActionPoint())
+            if ((Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f) && !isMoving)
             {
                 // 计算目标位置
                 float moveDistance = 2f;
@@ -74,7 +73,7 @@ public class Player2Controller : MonoBehaviour
                 targetPosition = transform.position + new Vector3(0, 0, -Input.GetAxisRaw("Horizontal") * moveDistance);
         
                 // 减少行动点数
-                GameManager.Instance.SetActionPoint();
+                //GameManager.Instance.SetActionPoint();
             
                 isMoving = true;
                 elapsedTime = 0.0f;
@@ -117,7 +116,7 @@ public class Player2Controller : MonoBehaviour
 
     void Gravity()
     {
-        rb.AddForce(-1 * g,0,0,ForceMode.Force);
+        rb.AddForce(-1 * GameManager.Instance.g,0,0,ForceMode.Force);
     }
     
     private void Jump()

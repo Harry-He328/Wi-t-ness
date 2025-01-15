@@ -46,9 +46,9 @@
      <Compile Include="Assets\Scripts\Player1Ability.cs" />
      <Compile Include="Assets\Scripts\Player2Controller.cs" />
      <Compile Include="Assets\Resources\Quirky Series - Birds Bundle\_Scripts\Demo.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Player1Controller.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Sprites" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza" />
@@ -56,6 +56,7 @@
      <Folder Include="Assets\Resources\Quirky Series Ultimate\FREE\Textures" />
      <Folder Include="Assets\Effects" />
      <None Include="Assets\Resources\Quirky Series - Birds Bundle\_Shader\SoftSurface.shader" />
+     <Folder Include="Assets\Models" />
      <Folder Include="Assets\Resources" />
      <Folder Include="Assets\Resources\Quirky Series Ultimate" />
      <Folder Include="Assets\Scripts" />
@@ -71,6 +72,7 @@
      <Folder Include="Assets\Resources\Cubes" />
      <Folder Include="Assets\Resources\Quirky Series Ultimate\FREE\Models" />
      <Folder Include="Assets\Materials" />
+     <Folder Include="Assets\Audio\AudioClips" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Materials" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Materials\URP" />
      <Folder Include="Assets\Resources\Quirky Series - Birds Bundle\_Shader\URP (Unity 2019.3.0f3 and above)" />
@@ -78,11 +80,13 @@
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Demo" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Materials\Standard" />
+     <Folder Include="Assets\Timelines" />
      <Folder Include="Assets\Resources\Quirky Series - Birds Bundle\_Animations" />
      <Folder Include="Assets\Resources\Quirky Series - Birds Bundle\_Animations\Shapekey" />
      <Folder Include="Assets\Resources\Quirky Series - Birds Bundle" />
      <Folder Include="Assets\Textures" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Demo\Prototype Materials Demo" />
+     <Folder Include="Assets\Audio" />
      <Folder Include="Assets\Resources\Quirky Series Ultimate\FREE\Demo" />
      <None Include="Assets\Shaders\ScanLine.shader" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Template" />

@@ -17,6 +17,7 @@ public class Player1Controller : MonoBehaviour
 
     private void Start()
     {
+        this.transform.localRotation = new Quaternion(30, 180, 0, 0);
         movePoint = transform.Find("Player1MovePoint").gameObject;
         rb = GetComponent<Rigidbody>();
         movePoint.transform.parent = null;
@@ -87,24 +88,23 @@ public class Player1Controller : MonoBehaviour
 
             if (angle == 0)
             {
-                transform.rotation = Quaternion.Euler(0, 90, 0);
+                transform.rotation = Quaternion.Euler(90, 90, this.transform.rotation.z);
             }
             else if (angle == 90)
             {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
+                transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
             }
             else if (angle == 180 || angle == -180)
             {
-                transform.rotation = Quaternion.Euler(0, 270, 0);
+                transform.rotation = Quaternion.Euler(90, 270, this.transform.rotation.z);
             }
             else if (angle == 270 || angle == -90)
             {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                transform.rotation = Quaternion.Euler(90, 180, this.transform.rotation.z);
             }
         }
     }
-
-
+    
     //判断是否在移动，如果正在移动过程中则不能进行下一次移动，实现每次移动消耗一个行动点数的效果
     public void MoveableDetection()
     {

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public Slider slider;
     public bool isPlayerTurn;
     public static GameManager Instance;
+    public float g = 9.8f;
 
     [Header("MovePoints")] 
     public int playerActionPoint;

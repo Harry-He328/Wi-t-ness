@@ -7,7 +7,7 @@ public class Player1Ability : MonoBehaviour
     public LayerMask objectLayer;     // 物体所在的图层
     public float pickDistance = 1.0f; // 吸附距离
     public KeyCode pickKeyCode = KeyCode.X; // 吸附物体的按键
-    public float pickUpOffset = 1.0f; // 吸附时物体相对于角色的垂直偏移量
+    public float pickUpOffset = 2.0f; // 吸附时物体相对于角色的垂直偏移量
     public float dropOffset = 2.0f;   // 放下时物体相对于角色的前方偏移量
     
     private Vector3[] directions = {
