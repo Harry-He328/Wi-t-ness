@@ -17,7 +17,6 @@ public class Player1Controller : MonoBehaviour
 
     private void Start()
     {
-        this.transform.localRotation = new Quaternion(30, 180, 0, 0);
         movePoint = transform.Find("Player1MovePoint").gameObject;
         rb = GetComponent<Rigidbody>();
         movePoint.transform.parent = null;
@@ -26,7 +25,7 @@ public class Player1Controller : MonoBehaviour
     private void Update()
     {
         //让相机对准的角色才能移动
-        if (vc1.Priority > vc2.Priority)
+        if (CameraController.Instance.activePlayer1)
         {
             Player1Movement();
             MoveableDetection();
@@ -88,19 +87,23 @@ public class Player1Controller : MonoBehaviour
 
             if (angle == 0)
             {
-                transform.rotation = Quaternion.Euler(90, 90, this.transform.rotation.z);
+                transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
+                transform.localScale = new Vector3(1, 1, 1); 
             }
             else if (angle == 90)
             {
                 transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
+                transform.localScale = new Vector3(1, 1, 1); 
             }
             else if (angle == 180 || angle == -180)
             {
-                transform.rotation = Quaternion.Euler(90, 270, this.transform.rotation.z);
+                transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
+                transform.localScale = new Vector3(-1, 1, 1); 
             }
             else if (angle == 270 || angle == -90)
             {
-                transform.rotation = Quaternion.Euler(90, 180, this.transform.rotation.z);
+                transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
+                transform.localScale = new Vector3(-1, 1, 1); 
             }
         }
     }

@@ -910,14 +910,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351958627}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 30, y: 1, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 449197191}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &351958629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1419,6 +1419,7 @@ MonoBehaviour:
   cine1: {fileID: 1469892437}
   cine2: {fileID: 282707758}
   activePlayer1: 1
+  activePlayer2: 0
 --- !u!4 &716809691
 Transform:
   m_ObjectHideFlags: 0
@@ -1993,7 +1994,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 10.68
   m_Depth: -1
   m_CullingMask:
@@ -2018,7 +2019,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.70090926, y: 0, z: 0, w: 0.7132505}
-  m_LocalPosition: {x: 0, y: 11, z: 14}
+  m_LocalPosition: {x: 0, y: 16.5, z: 10.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2116,7 +2117,7 @@ GameObject:
   - component: {fileID: 1011868142}
   - component: {fileID: 1011868141}
   - component: {fileID: 1011868140}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Cube (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2505,8 +2506,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187744053}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 1, z: 14}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.64, z: 10.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2515,7 +2516,7 @@ Transform:
   - {fileID: 115137593}
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1187744059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2532,11 +2533,9 @@ MonoBehaviour:
   pickedObject: {fileID: 0}
   objectLayer:
     serializedVersion: 2
-    m_Bits: 64
-  pickDistance: 3
+    m_Bits: 128
   pickKeyCode: 120
-  pickUpOffset: 1
-  dropOffset: 2
+  pickUpHeight: 2
 --- !u!54 &1187744060
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2616,7 +2615,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.5203567, y: 3.0342534, z: 0.20000005}
+  m_Size: {x: 4, y: 2, z: 0.20000005}
   m_Center: {x: -0.17770398, y: -0.0032883883, z: 7.48969e-16}
 --- !u!1 &1260102575
 GameObject:
@@ -2631,7 +2630,7 @@ GameObject:
   - component: {fileID: 1260102577}
   - component: {fileID: 1260102576}
   - component: {fileID: 1260102581}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2745,7 +2744,7 @@ GameObject:
   - component: {fileID: 1371289584}
   - component: {fileID: 1371289583}
   - component: {fileID: 1371289582}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2999,7 +2998,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469892435}
   m_LocalRotation: {x: 0.70090926, y: -0, z: -0, w: 0.7132505}
-  m_LocalPosition: {x: 0, y: 11, z: 14}
+  m_LocalPosition: {x: 0, y: 16.5, z: 10.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3033,7 +3032,7 @@ MonoBehaviour:
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
-    ModeOverride: 1
+    ModeOverride: 2
     LensShift: {x: 0, y: 0}
     GateFit: 2
     m_SensorSize: {x: 1, y: 1}
@@ -3806,7 +3805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 10, z: 0}
+  m_FollowOffset: {x: 0, y: 15.86, z: -0.13999939}
   m_XDamping: 0
   m_YDamping: 1
   m_ZDamping: 1

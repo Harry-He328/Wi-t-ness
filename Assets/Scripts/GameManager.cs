@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Instance = this;
-        isPlayerTurn = true;
+        isPlayerTurn = false;
         InitializeActionPoint();
     }
 

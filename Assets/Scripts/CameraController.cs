@@ -6,8 +6,9 @@ public class CameraController : MonoBehaviour
 {
     public static CameraController Instance;
 
-    public Cinemachine.CinemachineVirtualCamera cine1,cine2;
+    public Cinemachine.CinemachineVirtualCamera cine1, cine2;
     public bool activePlayer1 = true;
+    public bool activePlayer2 = false;
 
     private void Awake()
     {
@@ -18,19 +19,27 @@ public class CameraController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if (cine1.Priority > cine2.Priority)//切换到player2
-            {
-                cine1.Priority -= 1;
-                cine2.Priority += 1;
-                activePlayer1 = false;
-            }
-            else//切换到player1
-            {
-                cine1.Priority += 1;
-                cine2.Priority -= 1;
-                activePlayer1 = true;
-            }
+            StartCoroutine(SwitchCameraAndUpdatePlayer());
         }
-        //Debug.Log(activePlayer1);
+    }
+
+    private IEnumerator SwitchCameraAndUpdatePlayer()
+    {
+        if (cine1.Priority > cine2.Priority) // 切换到player2
+        {
+            cine1.Priority -= 1;
+            cine2.Priority += 1;
+            activePlayer1 = false;
+            yield return new WaitForSeconds(1.0f); // 等待一秒
+            activePlayer2 = true;
+        }
+        else // 切换到player1
+        {
+            cine1.Priority += 1;
+            cine2.Priority -= 1;
+            activePlayer2 = false;
+            yield return new WaitForSeconds(1.0f); // 等待一秒
+            activePlayer1 = true;
+        }
     }
 }

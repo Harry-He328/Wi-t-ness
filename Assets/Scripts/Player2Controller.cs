@@ -41,7 +41,7 @@ public class Player2Controller : MonoBehaviour
     void Update()
     {
         //让相机对准的角色才能移动
-        if (vc1.Priority < vc2.Priority)
+        if (CameraController.Instance.activePlayer2)
         {
             if (!onGround)
             {
