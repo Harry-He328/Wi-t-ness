@@ -17,6 +17,15 @@ public class Player2Controller : MonoBehaviour
     public CinemachineVirtualCamera vc2;
     public float jumpForce;
     private CapsuleCollider groundCheckCollider;
+    private float alpha1 = 255 / 255f;
+    private float alpha2 = 200 / 255f;
+
+    private Vector3 groundCheckPoint;
+    public LayerMask groundLayer;
+    public float groundCheckDistance;
+    private RaycastHit hit;
+
+    private SpriteRenderer _spriteRenderer;
     
     [Header("Turn-Based Movement")]
     public bool turn_based_movement;
@@ -35,14 +44,21 @@ public class Player2Controller : MonoBehaviour
         movePoint = transform.Find("Player2MovePoint").gameObject;
         movePoint.transform.parent = null;
         groundCheckCollider = GetComponent<CapsuleCollider>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        groundCheckPoint = transform.Find("GroundCheckPoint").position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        GroundCheck();
         //让相机对准的角色才能移动
         if (CameraController.Instance.activePlayer2)
         {
+            Color color = _spriteRenderer.color;
+            color.a = alpha1;
+            _spriteRenderer.color = color;
+            
             if (!onGround)
             {
                 Gravity();
@@ -55,6 +71,10 @@ public class Player2Controller : MonoBehaviour
         else
         {
             rb.velocity = Vector3.zero;
+            
+            Color color = _spriteRenderer.color;
+            color.a = alpha2;
+            _spriteRenderer.color = color;
         }
 
         time += 1f * Time.deltaTime;
@@ -71,6 +91,9 @@ public class Player2Controller : MonoBehaviour
                 float moveDistance = 2f;
                 time = 1f;
                 targetPosition = transform.position + new Vector3(0, 0, -Input.GetAxisRaw("Horizontal") * moveDistance);
+                
+                if (Input.GetAxisRaw("Horizontal") > 0.1f) transform.localScale = new Vector3(1, 1, 1);
+                else if (Input.GetAxisRaw("Horizontal") < -0.1f) transform.localScale = new Vector3(-1, 1, 1);
         
                 // 减少行动点数
                 //GameManager.Instance.SetActionPoint();
@@ -104,7 +127,11 @@ public class Player2Controller : MonoBehaviour
             float moveAmount = horizontalInput * moveSpeed * Time.deltaTime;
  
             // 更新角色位置
-            transform.Translate(0, 0, -moveAmount);
+            transform.Translate(moveAmount, 0, 0);
+            
+            //转向
+            if (horizontalInput > 0.1f) transform.localScale = new Vector3(1, 1, 1);
+            else if (horizontalInput < -0.1f) transform.localScale = new Vector3(-1, 1, 1);
         }
     }
     //判断是否在移动，如果正在移动过程中则不能进行下一次移动，实现每次移动消耗一个行动点数的效果
@@ -123,28 +150,32 @@ public class Player2Controller : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
+            turn_based_movement = false;
+            real_time_movement = true;
             onGround = false;
             rb.AddForce(new Vector3(1 * jumpForce, 0,0),ForceMode.Impulse);
         }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            turn_based_movement = true;
+            real_time_movement = false;
+        }
     }
     
-    private void OnTriggerEnter(Collider other)
+    void GroundCheck()
     {
-        if (other.transform.tag.Equals("Ground"))
+        Debug.DrawRay(groundCheckPoint,Vector3.left,Color.green);
+        if (Physics.Raycast(groundCheckPoint, Vector3.left, out hit, groundCheckDistance, groundLayer))
         {
             onGround = true;
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform.tag.Equals("Ground"))
+        else
         {
             onGround = false;
         }
     }
 }
 
-//目前操作手感不是很好，贴墙走会有震动，和地面的判定不是很对
 
 

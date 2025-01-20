@@ -6,7 +6,7 @@ public class Player1Ability : MonoBehaviour
     public GameObject pickedObject;  // 当前被吸附的物体
     public LayerMask objectLayer;     // 物体所在的图层
     public KeyCode pickKeyCode = KeyCode.X; // 吸附物体的按键
-    public float pickUpHeight = 3.0f; // 吸附时物体相对于角色的垂直偏移量
+    public float pickUpHeight = 1.0f; // 吸附时物体相对于角色的垂直偏移量
     public const float pickDistance = 100.0f;
 
     void Update()
@@ -32,40 +32,21 @@ public class Player1Ability : MonoBehaviour
                     // 如果当前没有吸附物体，则吸附鼠标指向的物体
                     pickedObject = hitObject;
                     pickedObject.transform.SetParent(playerTransform);
-                    pickedObject.transform.localPosition = new Vector3(0, 0, -pickUpHeight);
-                }
-                else if (pickedObject == hitObject)
-                {
-                    // 如果当前吸附的物体就是鼠标指向的物体，则将其放置到鼠标指向的位置
-                    Vector3 mousePositionWorld = ray.GetPoint(hitInfo.distance);
-                    pickedObject.transform.position = mousePositionWorld;
-                    pickedObject.transform.SetParent(null);
-                    pickedObject = null;
-                }
-                else
-                {
-                    if (pickedObject != null)
-                    {
-                        Vector3 dropPosition = playerTransform.position + new Vector3(0, 0, pickUpHeight); // 临时放置位置
-                        pickedObject.transform.position = dropPosition;
-                        pickedObject.transform.SetParent(null);
-                        pickedObject = null;
-                    }
+                    pickedObject.transform.localPosition = new Vector3(0, pickUpHeight, 0);
                 }
             }
             else if (pickedObject != null)
             {
-                // 如果没有检测到鼠标指向任何物体，但当前有吸附的物体，则将其放置回角色身边（或者一个默认位置）
-                // 这里我们选择将其放置回角色上方（可选）
-                Vector3 dropPosition = playerTransform.position + new Vector3(0, 0, pickUpHeight); // 临时放置位置
-                pickedObject.transform.position = dropPosition;
+                //将吸附的物体放下
+                //Vector3 dropPosition = playerTransform.position + new Vector3(0, pickUpHeight, 0);
+                //pickedObject.transform.position = dropPosition;
                 pickedObject.transform.SetParent(null);
                 pickedObject = null;
             }
         }
     }
 
-    // 使用Gizmos在Scene视图中绘制射线
+    // 绘制射线
     private void OnDrawGizmos()
     {
         // 确保在Scene视图中只有在选择了包含这个脚本的GameObject时，才绘制Gizmos

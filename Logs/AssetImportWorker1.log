@@ -1,0 +1,639 @@
+Using pre-set license
+Built from '2021.3/china_unity/release' branch; Version is '2021.3.32f1c1 (fa19b96eeab7) revision 16390585'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'zh' Physical Memory: 16253 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\2021.3.32f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+D:/Unity/Sourses/Witness
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+14235
+Successfully changed project path to: D:/Unity/Sourses/Witness
+D:/Unity/Sourses/Witness
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [16484] Host "[IP] 192.168.220.1 [Port] 0 [Flags] 2 [Guid] 198152690 [EditorId] 198152690 [Version] 1048832 [Id] WindowsEditor(7,MS-RIEVPPNFYYPL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [16484] Host "[IP] 192.168.220.1 [Port] 0 [Flags] 2 [Guid] 198152690 [EditorId] 198152690 [Version] 1048832 [Id] WindowsEditor(7,MS-RIEVPPNFYYPL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+AS: AutoStreaming module initializing.
+[Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
+Refreshing native plugins compatible for Editor in 80.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.32f1c1 (fa19b96eeab7)
+[Subsystems] Discovering subsystems at path D:/Unity/2021.3.32f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/Sourses/Witness/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:   NVIDIA
+    VRAM:     5969 MB
+    Driver:   31.0.15.4601
+Initialize mono
+Mono path[0] = 'D:/Unity/2021.3.32f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2021.3.32f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/2021.3.32f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/2021.3.32f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002680 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 76.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.615 seconds
+Domain Reload Profiling:
+	ReloadAssembly (616ms)
+		BeginReloadAssembly (91ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (433ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (101ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (258ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (76ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (122ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007754 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Completed reload, in  1.627 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1628ms)
+		BeginReloadAssembly (121ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (1407ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (973ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (85ms)
+				ProcessInitializeOnLoadAttributes (853ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3370 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 48 unused Assets / (1.3 MB). Loaded Objects now: 3821.
+Memory consumption went from 131.4 MB to 130.1 MB.
+Total: 3.730600 ms (FindLiveObjects: 0.271200 ms CreateObjectMapping: 0.087000 ms MarkObjects: 3.071700 ms  DeleteObjects: 0.299500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 4.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 29 unused Assets / (1.3 MB). Loaded Objects now: 3821.
+Memory consumption went from 61.3 MB to 60.0 MB.
+Total: 3.050000 ms (FindLiveObjects: 0.289800 ms CreateObjectMapping: 0.177300 ms MarkObjects: 2.339400 ms  DeleteObjects: 0.242600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1239.848396 seconds.
+  path: Assets/Models/FloorAssets/block-moving.fbx
+  artifactKey: Guid(3a9f8e82f2ce9754b96c7433a4ac5603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-moving.fbx using Guid(3a9f8e82f2ce9754b96c7433a4ac5603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf3a8beffafd95c5a99d7d137fcd9f20') in 0.140192 seconds 
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.126375 seconds.
+  path: Assets/Models/FloorAssets/block-snow-corner-low.fbx
+  artifactKey: Guid(8fe178ca85112e04cbcc090e56f9004b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-corner-low.fbx using Guid(8fe178ca85112e04cbcc090e56f9004b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f1089a23d82d03445b6b617d5a7f71a') in 0.033023 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Models/FloorAssets/block-snow-long.fbx
+  artifactKey: Guid(d11de6b001e50ab428ea9408c2470996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-long.fbx using Guid(d11de6b001e50ab428ea9408c2470996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad30f076e9d7856f7c3cd3c5a2c76fb8') in 0.020677 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Models/FloorAssets/block-grass-overhang-large-slope.fbx
+  artifactKey: Guid(9462549f2dde1374fbd1e54969daa4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass-overhang-large-slope.fbx using Guid(9462549f2dde1374fbd1e54969daa4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '469bccad3d562cd155007d9f61bd29d6') in 0.019699 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/FloorAssets/tree.fbx
+  artifactKey: Guid(4344df1f75602eb4d9a027943514a35c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/tree.fbx using Guid(4344df1f75602eb4d9a027943514a35c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ffedaf962b5eac352bbf7a384990feb') in 0.158022 seconds 
+Number of asset objects unloaded after import = 84
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Models/FloorAssets/trap-spikes.fbx
+  artifactKey: Guid(a8d850aaf70fa6d458bba894d96b26a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/trap-spikes.fbx using Guid(a8d850aaf70fa6d458bba894d96b26a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33636b7b8bc03a7c8426ae6c16a674d8') in 0.029232 seconds 
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Models/FloorAssets/tree-pine.fbx
+  artifactKey: Guid(4ef8a9d7af703bf4caa6c28e4ef62343) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/tree-pine.fbx using Guid(4ef8a9d7af703bf4caa6c28e4ef62343) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '336545c4f29450236bad8f3b3f975688') in 0.016417 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Models/FloorAssets/block-grass-curve.fbx
+  artifactKey: Guid(1a3101f1391fa164882bfb3de7880f4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass-curve.fbx using Guid(1a3101f1391fa164882bfb3de7880f4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87099f6a948cf750e803017c135d2d2f') in 0.017130 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Models/FloorAssets/block-snow-narrow.fbx
+  artifactKey: Guid(f00dc5214ca052149802a1661f9fdc9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-narrow.fbx using Guid(f00dc5214ca052149802a1661f9fdc9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b367606f18da3923dae7928c4ac70cda') in 0.016397 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Models/FloorAssets/block-snow-low-hexagon.fbx
+  artifactKey: Guid(b4f60e19ae3fe5347be7a12c7fd3c8f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-low-hexagon.fbx using Guid(b4f60e19ae3fe5347be7a12c7fd3c8f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ecfd6c9d1b7c45231bc0c5666f67933') in 0.017060 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Models/FloorAssets/arrows.fbx
+  artifactKey: Guid(08b510f4d0e22ee449e5fa326358b925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/arrows.fbx using Guid(08b510f4d0e22ee449e5fa326358b925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f311864334460a33452278abf8e4741') in 0.016276 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Models/FloorAssets/block-grass-low-hexagon.fbx
+  artifactKey: Guid(abf656591ed75fd42ade6aea93b83dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass-low-hexagon.fbx using Guid(abf656591ed75fd42ade6aea93b83dc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7297d5580c7ea6f015673ee6e4d665b8') in 0.018397 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Models/FloorAssets/grass.fbx
+  artifactKey: Guid(5b4f2604d414d814289af351a01b0d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/grass.fbx using Guid(5b4f2604d414d814289af351a01b0d5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05dadbfe93dffe8f59fc58d69c4dd294') in 0.015090 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/FloorAssets/block-snow-low-large.fbx
+  artifactKey: Guid(46c3652dde34fd24e8fcc684eb45ee53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-low-large.fbx using Guid(46c3652dde34fd24e8fcc684eb45ee53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca6a3089a534879af36b6b947fea77c3') in 0.015473 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Models/FloorAssets/block-grass-overhang-large-slope-steep-narrow.fbx
+  artifactKey: Guid(511efaf5bb850ed44837f445b0792e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass-overhang-large-slope-steep-narrow.fbx using Guid(511efaf5bb850ed44837f445b0792e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27f4a25afb9b5ecc721303da3c1d8950') in 0.016361 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/FloorAssets/block-snow-large-slope-narrow.fbx
+  artifactKey: Guid(6acc26f315cb6eb41a40ceb6e5d27ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-large-slope-narrow.fbx using Guid(6acc26f315cb6eb41a40ceb6e5d27ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3107da6c71f6f15b90b77ffb67d4b5a1') in 0.016462 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Models/FloorAssets/block-grass-low-large.fbx
+  artifactKey: Guid(b5e106c14b8aba143b765c125debb14f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass-low-large.fbx using Guid(b5e106c14b8aba143b765c125debb14f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc3eb41b7d6ed2bcdbeb19cc74a35667') in 0.014820 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Models/FloorAssets/tree-snow.fbx
+  artifactKey: Guid(a47ca0a72604383498af0003db6b30e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/tree-snow.fbx using Guid(a47ca0a72604383498af0003db6b30e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '101d7e5f2cb5df4f3267f54cdd9a3329') in 0.136717 seconds 
+Number of asset objects unloaded after import = 84
+========================================================================
+Received Import Request.
+  Time since last request: 0.311786 seconds.
+  path: Assets/Models/FloorAssets/key.fbx
+  artifactKey: Guid(3d436e7b949d6cb4d8545576b5e4cbd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/key.fbx using Guid(3d436e7b949d6cb4d8545576b5e4cbd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '497770df4f7dc9f5fc8667a8cb82c80e') in 0.016732 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Models/FloorAssets/hedge.fbx
+  artifactKey: Guid(b6e4374f5749fb749b798bd65d205cee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/hedge.fbx using Guid(b6e4374f5749fb749b798bd65d205cee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ad7e0e9643fae12d055379d12f61460') in 0.017107 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Models/FloorAssets/flowers.fbx
+  artifactKey: Guid(65e651c3504c4494fac624b8a63d4b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/flowers.fbx using Guid(65e651c3504c4494fac624b8a63d4b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0b631b323e58768dbb60d577322b473') in 0.037766 seconds 
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Models/FloorAssets/stones.fbx
+  artifactKey: Guid(ee7cb15255756d3408691d4c099c798e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/stones.fbx using Guid(ee7cb15255756d3408691d4c099c798e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ae2532151537ba6ee5928bb1e64aef6') in 0.015747 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Models/FloorAssets/rocks.fbx
+  artifactKey: Guid(19ff16eb5f1976e468d97f96ef626cde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/rocks.fbx using Guid(19ff16eb5f1976e468d97f96ef626cde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c978255924b04001e81db5cf2571e64a') in 0.016964 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Models/FloorAssets/ladder-long.fbx
+  artifactKey: Guid(46989c239e4d1194db262e900a4e7192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/ladder-long.fbx using Guid(46989c239e4d1194db262e900a4e7192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2852051a878d4fbc1ebdc288639859d9') in 0.014986 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/FloorAssets/lock.fbx
+  artifactKey: Guid(d25fcfe3521fcb1419201970bff93996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/lock.fbx using Guid(d25fcfe3521fcb1419201970bff93996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '187e835a3e68e99e2cbae7b4a9f168c6') in 0.016012 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Models/FloorAssets/spike-block.fbx
+  artifactKey: Guid(e45aac1937909d141bec7a85488f452c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/spike-block.fbx using Guid(e45aac1937909d141bec7a85488f452c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44b1d395b9879b72eb9ca1acd462d95c') in 0.016757 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Models/FloorAssets/platform-overhang.fbx
+  artifactKey: Guid(67aeb7d3a7e6dd1469fe604613d316b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/platform-overhang.fbx using Guid(67aeb7d3a7e6dd1469fe604613d316b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '431bdfa0b811be67492106c581e8bfee') in 0.019290 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Models/FloorAssets/platform-fortified.fbx
+  artifactKey: Guid(91ffb48f7820832499da0238d03a7d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/platform-fortified.fbx using Guid(91ffb48f7820832499da0238d03a7d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e89dcb015115be7bd47ccd74889a56e2') in 0.016972 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Models/FloorAssets/trap-spikes-large.fbx
+  artifactKey: Guid(b486ff711fa7b5a4ea178f3190e1d6b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/trap-spikes-large.fbx using Guid(b486ff711fa7b5a4ea178f3190e1d6b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f0b22571da313196371fa69ed119b2c') in 0.024719 seconds 
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Models/FloorAssets/plant.fbx
+  artifactKey: Guid(2ce48bbe854c03a47b73589eed779de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/plant.fbx using Guid(2ce48bbe854c03a47b73589eed779de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1fde2f47ac69cf37b14be500f18271f') in 0.015503 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Models/FloorAssets/fence-low-broken.fbx
+  artifactKey: Guid(d402230cb2893194185a8fd70e420915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/fence-low-broken.fbx using Guid(d402230cb2893194185a8fd70e420915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06381007dccdf2a109e8a456b27a4ac6') in 0.016734 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Models/FloorAssets/block-snow-overhang-large.fbx
+  artifactKey: Guid(5d2b3d6df7ccf2945a455673a06f34ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-overhang-large.fbx using Guid(5d2b3d6df7ccf2945a455673a06f34ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b33cf0be14a07d325ad401c0d717640d') in 0.015665 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Models/FloorAssets/block-snow-overhang-low-narrow.fbx
+  artifactKey: Guid(d0cd0f8c0f9b87a409c980bade82de50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-overhang-low-narrow.fbx using Guid(d0cd0f8c0f9b87a409c980bade82de50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69c9212c179796782547740e305f0e0c') in 0.015624 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/Models/FloorAssets/block-snow-overhang-low-hexagon.fbx
+  artifactKey: Guid(4c3d729f22700894db72239ffbfb860a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-overhang-low-hexagon.fbx using Guid(4c3d729f22700894db72239ffbfb860a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '669e6dc0dc51b2e95df9cc7698ffc196') in 0.016528 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Models/FloorAssets/block-snow-overhang-large-slope.fbx
+  artifactKey: Guid(788756b223108a04bb27f6b65dfd46c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-overhang-large-slope.fbx using Guid(788756b223108a04bb27f6b65dfd46c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dbfbb614378224d54282fd201ae2dbb') in 0.016494 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Models/FloorAssets/block-snow-overhang-hexagon.fbx
+  artifactKey: Guid(8c4937d629aea7345af00a3e7acae5aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-overhang-hexagon.fbx using Guid(8c4937d629aea7345af00a3e7acae5aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fecda2066c697c547d7f7d7dccfc6b5') in 0.015561 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Models/FloorAssets/block-snow.fbx
+  artifactKey: Guid(b70ec48cfc0e45648ad9d253e3c5a031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow.fbx using Guid(b70ec48cfc0e45648ad9d253e3c5a031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9529f6e86f15647bc568a2ce32378cbc') in 0.016635 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Models/FloorAssets/block-snow-overhang-edge.fbx
+  artifactKey: Guid(cc6376f45afeb684092e27b5a575af10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-overhang-edge.fbx using Guid(cc6376f45afeb684092e27b5a575af10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fbe2f86c2237624d91b655fdebe38c3') in 0.018289 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Models/FloorAssets/coin-gold.fbx
+  artifactKey: Guid(759e9e3acb9a53a478acd67ee8cf5fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/coin-gold.fbx using Guid(759e9e3acb9a53a478acd67ee8cf5fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa28d8a613a9a89dad3dafb165450d96') in 0.016482 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Models/FloorAssets/coin-silver.fbx
+  artifactKey: Guid(d7f3db7d226da2d4ab5b825cba5b3c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/coin-silver.fbx using Guid(d7f3db7d226da2d4ab5b825cba5b3c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33637272f66a1e1debd6783f43916302') in 0.016294 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Models/FloorAssets/crate-item.fbx
+  artifactKey: Guid(fa19dc775386a734ea711405c49f4436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/crate-item.fbx using Guid(fa19dc775386a734ea711405c49f4436) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca5d06463bba6678d425991542063595') in 0.017071 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Models/FloorAssets/button-square.fbx
+  artifactKey: Guid(83ee8ad7621540c48ab09282975102a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/button-square.fbx using Guid(83ee8ad7621540c48ab09282975102a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '244b165b854a81560dfc45aa410ad0be') in 0.027175 seconds 
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Models/FloorAssets/block-snow-overhang-low.fbx
+  artifactKey: Guid(ee89095926cc93e4f900a2ed978b3bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-overhang-low.fbx using Guid(ee89095926cc93e4f900a2ed978b3bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8583fbcb401802f15363d7d1b5139bca') in 0.017349 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/FloorAssets/block-snow-overhang-narrow.fbx
+  artifactKey: Guid(0845cfe666b480c47b7ebf3abba3a52b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-overhang-narrow.fbx using Guid(0845cfe666b480c47b7ebf3abba3a52b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1a5f6acdcec9ae3122837b831f1fdb4') in 0.015186 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Models/FloorAssets/fence-corner-curved.fbx
+  artifactKey: Guid(1300064bd22c0674e99cb4dede6e6fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/fence-corner-curved.fbx using Guid(1300064bd22c0674e99cb4dede6e6fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8a74cf49d13d6873ee0ed7c440b264b') in 0.014958 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Models/FloorAssets/block-snow-overhang-large-slope-steep-narrow.fbx
+  artifactKey: Guid(a025ad925a441834593bc9b0909f831b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-overhang-large-slope-steep-narrow.fbx using Guid(a025ad925a441834593bc9b0909f831b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e809d42ac5014ac2ad7528ba40349d2b') in 0.017690 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/FloorAssets/poles.fbx
+  artifactKey: Guid(91d7b8d58aa11444e9c7618319b5a085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/poles.fbx using Guid(91d7b8d58aa11444e9c7618319b5a085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '612cb54e9f9dc2f24dad14ec87d9098c') in 0.015682 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Models/FloorAssets/crate-strong.fbx
+  artifactKey: Guid(36d35cc3569f25c4d8f1396141863bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/crate-strong.fbx using Guid(36d35cc3569f25c4d8f1396141863bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f707e83d1e6403b27a8d39a891fe0a52') in 0.017495 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Models/FloorAssets/platform-ramp.fbx
+  artifactKey: Guid(7bad0158e1781f646892b0406ee79a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/platform-ramp.fbx using Guid(7bad0158e1781f646892b0406ee79a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdf197f778eae85dc23c1654d1d3b88a') in 0.016276 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 1.417075 seconds.
+  path: Assets/Models/FloorAssets/block-snow-curve.fbx
+  artifactKey: Guid(1ffab25437ae9d5429ee103546929b97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-snow-curve.fbx using Guid(1ffab25437ae9d5429ee103546929b97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ca0731fb5b871ce7bbf4c211ea6479b') in 0.018895 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.051957 seconds.
+  path: Assets/Models/FloorAssets/block-grass-overhang-large.fbx
+  artifactKey: Guid(ca50c81a55bd4d14c8414b37aee64548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass-overhang-large.fbx using Guid(ca50c81a55bd4d14c8414b37aee64548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '364f5303a173da48f0318c97674afee2') in 0.016782 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Models/FloorAssets/block-grass-overhang-long.fbx
+  artifactKey: Guid(23a3d39d1db8b124a9324c9f73196a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass-overhang-long.fbx using Guid(23a3d39d1db8b124a9324c9f73196a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42714b7310fd9863d785706dc7532059') in 0.019027 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Models/FloorAssets/block-grass-overhang-low-hexagon.fbx
+  artifactKey: Guid(aac42fa3b67104240938673cdb166149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass-overhang-low-hexagon.fbx using Guid(aac42fa3b67104240938673cdb166149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0967e4c8577ff433deaba7dd797bea1') in 0.016167 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.493925 seconds.
+  path: Assets/Models/FloorAssets/block-grass-overhang-low-narrow.fbx
+  artifactKey: Guid(8d2d33346d98ebf45adaec0f95a16652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass-overhang-low-narrow.fbx using Guid(8d2d33346d98ebf45adaec0f95a16652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7758e14900b50949ef576cbc0a9509d9') in 0.018498 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Models/FloorAssets/block-grass-overhang-narrow.fbx
+  artifactKey: Guid(50468c6561b2ddf4daa0090aee4dfcf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass-overhang-narrow.fbx using Guid(50468c6561b2ddf4daa0090aee4dfcf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff496fcb828862e57a8595dd6b33a8ad') in 0.018760 seconds 
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Models/FloorAssets/block-grass.fbx
+  artifactKey: Guid(f278f9e42d984c942809576f73877847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Models/FloorAssets/block-grass.fbx using Guid(f278f9e42d984c942809576f73877847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '478819ac2cd141542952400a82d5f02e') in 0.018090 seconds 
+Number of asset objects unloaded after import = 9
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -14,12 +14,16 @@ public class Player1Controller : MonoBehaviour
     private bool isActivePlayer;
     public CinemachineVirtualCamera vc1;
     public CinemachineVirtualCamera vc2;
+    private float alpha1 = 255 / 255f;
+    private float alpha2 = 200 / 255f;
+    private SpriteRenderer _spriteRenderer;
 
     private void Start()
     {
         movePoint = transform.Find("Player1MovePoint").gameObject;
         rb = GetComponent<Rigidbody>();
         movePoint.transform.parent = null;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -27,8 +31,17 @@ public class Player1Controller : MonoBehaviour
         //让相机对准的角色才能移动
         if (CameraController.Instance.activePlayer1)
         {
+            Color color = _spriteRenderer.color;
+            color.a = alpha1;
+            _spriteRenderer.color = color;
             Player1Movement();
             MoveableDetection();
+        }
+        else
+        {
+            Color color = _spriteRenderer.color;
+            color.a = alpha2;
+            _spriteRenderer.color = color;
         }
     }
 
@@ -49,11 +62,11 @@ public class Player1Controller : MonoBehaviour
             Vector3 newDirection = Vector3.zero;
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
-                newDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f) * gridSize;
+                newDirection = new Vector3(0f, 0f, -Input.GetAxisRaw("Horizontal")) * gridSize;
             }
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
-                newDirection = new Vector3(0f, 0f, Input.GetAxisRaw("Vertical") * gridSize);
+                newDirection = new Vector3(Input.GetAxisRaw("Vertical"), 0f, 0f) * gridSize;
             }
 
             if (newDirection != Vector3.zero)
@@ -83,27 +96,26 @@ public class Player1Controller : MonoBehaviour
 
             angle = Mathf.Round(angle / 90.0f) * 90.0f;
             if (angle == -0f) angle = 0f;
-
-
-            if (angle == 0)
+            
+            if (angle == 90)
             {
-                transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
-                transform.localScale = new Vector3(1, 1, 1); 
+                //transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
+                transform.localScale = new Vector3(-1, 1, 1); 
             }
-            else if (angle == 90)
+            else if (angle == 0)
             {
-                transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
-                transform.localScale = new Vector3(1, 1, 1); 
-            }
-            else if (angle == 180 || angle == -180)
-            {
-                transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
+                //transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
                 transform.localScale = new Vector3(-1, 1, 1); 
             }
             else if (angle == 270 || angle == -90)
             {
-                transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
-                transform.localScale = new Vector3(-1, 1, 1); 
+                //transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
+                transform.localScale = new Vector3(1, 1, 1); 
+            }
+            else if (angle == 180 || angle == -180)
+            {
+                //transform.rotation = Quaternion.Euler(90, 0, this.transform.rotation.z);
+                transform.localScale = new Vector3(1, 1, 1); 
             }
         }
     }

@@ -72,6 +72,7 @@
      <Folder Include="Assets\Resources\Cubes" />
      <Folder Include="Assets\Resources\Quirky Series Ultimate\FREE\Models" />
      <Folder Include="Assets\Materials" />
+     <Folder Include="Assets\Models\Platformer" />
      <Folder Include="Assets\Audio\AudioClips" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Materials" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Materials\URP" />
@@ -80,10 +81,12 @@
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Demo" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Materials\Standard" />
+     <Folder Include="Assets\Models\Platformer\Materials" />
      <Folder Include="Assets\Timelines" />
      <Folder Include="Assets\Resources\Quirky Series - Birds Bundle\_Animations" />
      <Folder Include="Assets\Resources\Quirky Series - Birds Bundle\_Animations\Shapekey" />
      <Folder Include="Assets\Resources\Quirky Series - Birds Bundle" />
+     <Folder Include="Assets\Models\FloorAssets" />
      <Folder Include="Assets\Textures" />
      <Folder Include="Assets\Resources\Cubes\Ciathyza\Gridbox Prototype Materials\Demo\Prototype Materials Demo" />
      <Folder Include="Assets\Audio" />
